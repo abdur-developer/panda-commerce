@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- BOOTSTRAP STYLESHEET -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- FAVICON ICON -->
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon" />
+    <!-- CUSTOME STYLESHEET -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="bg-dark mt-5">
+    <section id="login">
+      <div class="d-block m-auto w-75 p-4 bg-gradient rounded">
+        <div class="d-flex justify-content-center">
+          <div class="google-btn">
+            <div class="google-icon-wrapper">
+              <img
+                class="google-icon"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png"
+              />
+            </div>
+            <p class="btn-text"><b>Sign in with google</b></p>
+          </div>
+        </div>
+
+        <div class="row my-3">
+          <hr class="col-5 mt-3" />
+          <p class="col-2 m-auto">OR</p>
+          <hr class="col-5 mt-3" />
+        </div>
+
+        <div class="main">
+          <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+              <form>
+                <div class="form-group">
+                  <label>Email :</label>
+                  <input type="email" class="form-control" placeholder="you@email.com"/>
+                </div>
+                <div class="form-group mt-2">
+                  <label>Password :</label>
+                  <input type="password" class="form-control" placeholder="******"/>
+                </div>
+                <p class="small text-secondary m-0 my-1">forgot password..?</p>
+                <div class="d-flex justify-content-end">
+                  <button type="submit" class="btn btn-black text-white">Sign in</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-block m-auto w-75 p-4 bg-gradient rounded">
+        <p class="text-white d-flex justify-content-center" onclick="hide_sign_in()">
+          Don't have an account.?<span class="text-warning">&nbsp;Sign Up</span>
+        </p>
+      </div>
+    </section>
+    <section id="register">
+      <div class="d-block m-auto w-75 p-4 bg-gradient rounded">
+        <div class="d-flex justify-content-center">
+          <div class="google-btn">
+            <div class="google-icon-wrapper">
+              <img
+                class="google-icon"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png"
+              />
+            </div>
+            <p class="btn-text"><b>Sign up with google</b></p>
+          </div>
+        </div>
+
+        <div class="row my-3">
+          <hr class="col-5 mt-3" />
+          <p class="col-2 m-auto">OR</p>
+          <hr class="col-5 mt-3" />
+        </div>
+
+        <div class="main">
+          <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+              <form>
+                <div class="form-group">
+                  <label>Name :</label>
+                  <input type="text" class="form-control" placeholder="Elon mask"/>
+                </div>
+                <div class="form-group">
+                  <label>Email :</label>
+                  <input type="email" class="form-control" placeholder="you@email.com"/>
+                </div>
+                <div class="form-group mt-2">
+                  <label>Phone :</label>
+                  <input type="number" class="form-control" placeholder="017********"/>
+                </div>
+                <div class="form-group mt-2">
+                  <label>Password :</label>
+                  <input type="password" class="form-control" placeholder="******"/>
+                </div>
+                <div class="form-group mt-2">
+                  <label>Confirm Password :</label>
+                  <input type="password" class="form-control" placeholder="******"/>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <button type="submit" class="mt-2 btn btn-black text-white">
+                    Sign up
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-block m-auto w-75 p-4 bg-gradient rounded">
+        <p class="text-white d-flex justify-content-center" onclick="hide_sign_up()">
+          Already have an account.?<span class="text-warning">&nbsp;Sign In</span>
+        </p>
+      </div>
+    </section>
+    <script>
+        const sectionLogin = document.getElementById("login");
+        const sectionRegister = document.getElementById("register");
+        sectionRegister.style.display = "none";
+        function hide_sign_in(){
+            sectionLogin.style.display = "none";
+            sectionRegister.style.display = "block";
+        }
+        function hide_sign_up(){
+            sectionLogin.style.display = "block";
+            sectionRegister.style.display = "none";
+        }
+    </script>
+  </body>
+</html>
